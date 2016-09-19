@@ -2,24 +2,44 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    //border-top: 5px solid $grey-color-dark;
+    //border-bottom: 1px solid $grey-color-light;
+    //min-height: 56px;
+    min-height: 10em;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    .contact-list {
+        margin-top: 20px;
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
 }
 
 .site-title {
-    font-size: 26px;
-    line-height: 56px;
+    font-size: 5em;
+    //line-height: 2em;
     letter-spacing: -1px;
+    //padding-top: 1em;
     margin-bottom: 0;
-    float: left;
+    //float: left;
+    text-align: center;
+    display: block;
 
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    @include media-query($on-palm) {
+        font-size: 3em;
+        padding-top: 1em;
     }
 }
 
@@ -121,18 +141,18 @@
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+    width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {

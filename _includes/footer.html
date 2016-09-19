@@ -2,13 +2,31 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>
+            <a href="mailto:{{ site.email }}">
+              <span class="icon  icon--email">
+                <svg viewBox="0 0 24 24">
+                  <g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-251.000000, -335.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M273.292692,355 L252.71095,355 L252.71095,355 L260.041535,347.665728 L263,349.929598 L265.960528,347.664149 L273.292692,355 Z M274,354.293095 L274,341.512204 L274,341.512204 L266.761657,347.051112 L274,354.293095 Z M252,354.296739 L252,341.512204 L259.240407,347.052691 L252,354.296739 L252,354.296739 Z M274,340.253884 L274,339 L252,339 L252,340.253884 L263,348.68741 L274,340.253884 Z" fill="#000000" id="common-email-envelope-mail-glyph"/></g></g>
+              </span>
+
+              <span class="username">{{ site.email }}</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+              <span class="icon  icon--rss">
+                <svg viewBox="0 0 56.693 56.693">
+                  <path d="M3.428,31.085c6.19,0,12.009,2.418,16.382,6.816c4.381,4.398,6.793,10.256,6.793,16.492h9.539  c0-18.113-14.676-32.848-32.714-32.848V31.085z M3.443,14.174c22.061,0,40.01,18.047,40.01,40.231h9.539  c0-27.445-22.229-49.77-49.549-49.77V14.174z M16.634,47.741c0,3.648-2.959,6.607-6.607,6.607S3.42,51.39,3.42,47.741  c0-3.65,2.958-6.607,6.606-6.607S16.634,44.091,16.634,47.741z"/>
+                </svg>
+              </span>
+
+              <span class="username">Subscribe via RSS</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -42,11 +60,40 @@
             </a>
           </li>
           {% endif %}
+
+          {% if site.linkedin_username %}
+          <li>
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+              <span class="icon  icon--linkedin">
+                <svg viewBox="0 0 512 512">
+                  <path fill="#828282" d="M456,506H56c-27.617,0-50-22.392-50-50V56  C6,28.383,28.383,6,56,6h400c27.608,0,50,22.383,50,50v400C506,483.608,483.608,506,456,506z M76.391,446.469h77.344V186.313H76.391  V446.469z M120.571,69.994c-27.041,0-44.707,18.213-44.707,41.944c0,23.183,17.109,38.369,43.603,38.369  c28.145,0,45.264-15.186,45.264-38.369C164.164,88.207,147.612,69.994,120.571,69.994z M445.961,297.377  c0-79.472-24.951-116.445-80.136-116.445c-45.264,0-66.983,28.916-78.028,46.572h-1.65l0.088-41.191h-70.664  c1.103,24.287,0.576,53.115,0.576,86.777v173.379h80.068V301.244c0-7.724,0.547-15.459,2.754-20.976  c6.074-15.459,13.867-31.455,37.051-31.455c30.352,0,39.853,23.73,39.853,58.496v139.16h70.088V297.377z"/>
+                </svg>
+              </span>
+
+              <span class="username">{{ site.linkedin_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+
         </ul>
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
+        <ul class="social-media-list">
+          {% if site.stackoverflow_username %}
+          <li>
+            <a href="https://stackoverflow.com/users/{{ site.stackoverflow_userid }}/">
+              <span class="icon  icon--stackoverflow">
+                <svg viewBox="-1163 1657.697 56.693 56.693">
+                  <rect height="4.1104" transform="matrix(-0.8613 -0.508 0.508 -0.8613 -2964.1831 2556.6357)" width="19.2465" x="-1142.8167" y="1680.7778"/><rect height="4.1105" transform="matrix(-0.9657 -0.2596 0.2596 -0.9657 -2672.0498 3027.386)" width="19.2462" x="-1145.7363" y="1688.085"/><rect height="4.1098" transform="matrix(-0.9958 -0.0918 0.0918 -0.9958 -2425.5647 3282.8535)" width="19.246" x="-1146.9451" y="1695.1263"/><rect height="4.111" width="19.2473" x="-1147.2625" y="1701.293"/><path d="M-1121.4579,1710.9474c0,0,0,0.9601-0.0323,0.9601v0.0156h-30.7953c0,0-0.9598,0-0.9598-0.0156h-0.0326v-20.03h3.2877  v16.8049h25.2446v-16.8049h3.2877V1710.9474z"/><rect height="4.111" transform="matrix(0.5634 0.8262 -0.8262 0.5634 892.9033 1662.7915)" width="19.247" x="-1136.5389" y="1674.2235"/><rect height="4.1108" transform="matrix(0.171 0.9853 -0.9853 0.171 720.9987 2489.031)" width="19.2461" x="-1128.3032" y="1670.9347"/>
+                </svg>
+              </span>
+
+              <span class="username">{{ site.stackoverflow_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
       </div>
     </div>
 
